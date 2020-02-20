@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Mthree</string>
+    <string name="dealtoday">Deal saving till today Rs.150</string>
+    <string name="formval">Please register first time to book your deals &amp; access your Deal Walletz!
+    </string>
+    <string name="termstext">I Accept <u>Terms and Conditions</u></string>
+
+    <string-array name="indicatorarray">
+        <item>Deal</item>
+        <item>Shortlist</item>
+        <item>Book</item>
+        <item>Go Shop</item>
+
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="viewdeals"><u>View Deals as List</u></string>
+</resources>

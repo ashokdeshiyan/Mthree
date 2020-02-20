@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gradientstart"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:padding="@dimen/_1sdp"
+        style="@style/Theme.Design.Light.NoActionBar"
+        android:elevation="@dimen/_4ssp"
+        android:id="@+id/toolbar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginRight="@dimen/_10sdp"
+            >
+
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:id="@+id/backbtnhome"
+                android:paddingRight="@dimen/_5sdp"
+                />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/flag"
+                android:id="@+id/flag"
+                />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:fontFamily="@font/calibrib"
+                android:textSize="@dimen/_18ssp"
+                android:gravity="center_horizontal"
+                />
+
+            <ImageView
+                android:id="@+id/notificationbell"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/bell" />
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/bag"
+            />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>

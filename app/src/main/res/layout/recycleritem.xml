@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:id="@+id/recycleimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/shoe1" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_toRightOf="@id/recycleimage"
+        android:numStars="3"
+        android:progressTint="#FFD600" />
+
+
+    <TextView
+        android:layout_alignLeft="@id/ratingBar"
+        android:id="@+id/Brandrecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12sdp"
+        android:layout_toEndOf="@+id/recycleimage"
+        android:text="Brand(Shoes)" />
+
+
+    <TextView
+        android:id="@+id/tvofferdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Brandrecycler"
+        android:layout_alignLeft="@id/Brandrecycler"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/recycleimage"
+        android:text="Offer Details" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvofferdetails"
+        android:layout_alignLeft="@id/tvofferdetails"
+        android:layout_marginTop="5dp"
+        android:text="Early Bird offer -"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView3"
+        android:layout_alignTop="@id/textView3"
+        android:text="40% off"
+        android:id="@+id/offtext"
+        android:layout_marginLeft="@dimen/_2sdp"
+
+        />
+
+    <TextView
+        android:id="@+id/randpomtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_alignLeft="@id/textView3"
+        android:text="Randonm Text por discription"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewRtick"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignTop="@+id/ratingBar"
+        android:layout_alignBottom="@+id/ratingBar"
+        android:layout_marginStart="5dp"
+
+        android:layout_toEndOf="@+id/ratingBar"
+        app:srcCompat="@drawable/ricon" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignTop="@+id/imageViewRtick"
+        android:layout_alignBottom="@+id/imageViewRtick"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_toEndOf="@+id/imageViewRtick"
+        android:layout_toRightOf="@id/imageViewRtick"
+        app:srcCompat="@drawable/ricon" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/Brandrecycler"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/greenbutton"
+        android:text="Shortlist"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="19dp"
+        android:background="@drawable/greenstokebtn"
+        android:padding="@dimen/_3sdp"
+        android:text=" Save 50s "
+        android:textColor="@color/gradientstart" />
+
+
+</RelativeLayout>

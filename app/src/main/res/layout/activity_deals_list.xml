@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DealsList"
+>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<!--    <include-->
+<!--        android:id="@+id/include"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:layout_width="match_parent"-->
+<!--        layout="@layout/customtoolbartwo"/>-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:padding="@dimen/_1sdp"
+        style="@style/Theme.Design.Light.NoActionBar"
+        android:elevation="@dimen/_4ssp"
+        android:id="@+id/toolbar"
+        android:background="@color/gradientstart"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginRight="@dimen/_10sdp"
+            >
+
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:id="@+id/backbtnhome"
+                android:paddingRight="@dimen/_5sdp"
+                />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/flag"
+                android:id="@+id/flag"
+                />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEALS LIST"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:fontFamily="@font/calibrib"
+                android:textSize="@dimen/_18ssp"
+                android:gravity="center_horizontal"
+                />
+
+            <ImageView
+                android:id="@+id/notificationbell"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/mic" />
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/bag"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.xw.repo.widget.BounceScrollView
+        android:id="@+id/bouncescroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="-49dp">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/custom_indicator_by_java_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_indicator_color="#6200EA"
+                app:isb_indicator_text_color="#6200EA"
+                app:isb_progress="1"
+                app:isb_max="3"
+                app:isb_show_indicator="circular_bubble"
+                app:isb_show_tick_marks_type="oval"
+                app:isb_show_tick_texts="true"
+                app:isb_thumb_color="#D6D1DF"
+                app:isb_thumb_text_color="#6200EA"
+                app:isb_tick_marks_color="#6200EA"
+                app:isb_tick_texts_array="@array/indicatorarray"
+                app:isb_tick_texts_color="@color/colorAccent"
+                app:isb_ticks_count="4"
+                app:isb_track_progress_color="@color/colorAccent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/custom_indicator_by_java_code"
+                    android:id="@+id/searchbar"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginLeft="@dimen/_12ssp"
+                        android:layout_marginRight="@dimen/_12ssp"
+                        android:padding="@dimen/_12ssp"
+                        android:textSize="@dimen/_11ssp"
+                        android:hint="Brand Shoes"
+                        android:background="@drawable/searchbg"
+                        android:drawableRight="@drawable/search"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/filter"
+                        android:layout_weight="8"
+                        />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignStart="@id/searchbar"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Toatal Search items: "
+                    android:layout_marginLeft="@dimen/_12ssp"
+                    android:layout_below="@id/searchbar"
+                    android:id="@+id/searchtext"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/greyinput"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/searchtext"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:id="@+id/mainrecyclerview"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    />
+
+
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+        </ScrollView>
+
+    </com.xw.repo.widget.BounceScrollView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/bookbtnhere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/book"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>
+</layout>

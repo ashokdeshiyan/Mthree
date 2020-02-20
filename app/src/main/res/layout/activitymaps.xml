@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MapsActivity"
+    android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+<fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     />
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:padding="@dimen/_1sdp"
+        style="@style/Theme.Design.Light.NoActionBar"
+        android:elevation="@dimen/_4ssp"
+        android:id="@+id/toolbarmap"
+        tools:ignore="MissingConstraints"
+        android:background="@color/gradientstart"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginRight="@dimen/_10sdp"
+            >
+
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:id="@+id/backbtnhomemap"
+                android:paddingRight="@dimen/_5sdp"
+                />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/flag"
+                android:id="@+id/flag"
+                />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Map Search"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:fontFamily="@font/calibrib"
+                android:textSize="@dimen/_18ssp"
+                android:gravity="center_horizontal"
+                />
+
+
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/bag"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:rowCount="1"
+        android:columnCount="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarmap"
+        android:background="@color/gradientstart"
+        android:id="@+id/searchbar"
+        android:orientation="horizontal"
+        android:weightSum="10"
+
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12ssp"
+            android:padding="@dimen/_12ssp"
+            android:textSize="@dimen/_11ssp"
+            android:id="@+id/search_bar"
+            android:hint="Brand Shoes"
+            android:background="@drawable/searchbg"
+            android:drawableLeft="@drawable/seachgrey"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_weight="9"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/filter"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignTop="@id/search_bar"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@id/search_bar"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:src="@drawable/filter" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nextbtn"
+            android:text="Search"
+            android:layout_alignTop="@id/search_bar"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+
+
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gradientend"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/help"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/viewdeals"
+                android:textColor="@color/white"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/_10sdp"
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/book"
+                android:id="@+id/bookbox"
+                android:scaleType="fitXY"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/bookbox"
+                android:layout_alignRight="@id/bookbox"
+                android:text="Book"
+                android:textColor="@color/white"
+                android:layout_below="@id/bookbox"
+                android:textSize="@dimen/_16sdp"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
