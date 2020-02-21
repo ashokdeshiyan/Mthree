@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    >
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nextbtn"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/formback"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/deals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deal"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name-"
+                    android:id="@+id/nametext"
+                    android:layout_below="@id/deals"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/nametext"
+                    android:layout_alignTop="@id/nametext"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Sale"
+                    android:layout_alignBottom="@id/nametext"
+                    android:textSize="@dimen/_15sdp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brand-"
+                    android:id="@+id/brandtext"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/nametext"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/brandtext"
+                    android:textSize="@dimen/_15sdp"
+                    android:text="Nissan"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_alignBottom="@id/brandtext"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adress-"
+                    android:id="@+id/adresstext"
+                    android:textStyle="bold"
+                    android:layout_below="@id/brandtext"
+                    android:textSize="@dimen/_15sdp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address location of company"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_toRightOf="@id/adresstext"
+                    android:layout_alignTop="@id/adresstext"
+                    android:layout_alignBottom="@id/adresstext"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shortlist"
+                    android:layout_below="@id/adresstext"
+                    android:background="@drawable/greenbutton"
+                    android:textColor="@color/white"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+
+</FrameLayout>

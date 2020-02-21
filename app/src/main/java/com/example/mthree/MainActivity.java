@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
    public boolean show = true;
 
+
     Timer timer;
     MyViewPagerAdapter myViewPagerAdapter;
     @Override
@@ -85,6 +86,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.include.findViewById(R.id.notificationbell).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Bell",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         binding.dealtoday.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -166,7 +166,8 @@
                 android:text="@string/viewdeals"
                 android:textColor="@color/white"
                 android:layout_alignParentEnd="true"
-                android:textSize="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:textSize="@dimen/_13sdp"/>
 
         </RelativeLayout>
 
